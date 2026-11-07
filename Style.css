@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0e14;
+    color: #e8edf5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: #111722;
+    padding: 25px 18px;
+    border-right: 1px solid #252e3b;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: #00d6a0;
+    margin-bottom: 8px;
+}
+
+.sidebar p {
+    color: #778399;
+    font-size: 11px;
+    margin-bottom: 35px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #aab5c5;
+    padding: 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    background: #1d2c3d;
+    color: #00d6a0;
+}
+
+.main {
+    margin-left: 240px;
+    padding: 30px;
+    width: calc(100% - 240px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header span {
+    color: #8995a8;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #141b27;
+    border: 1px solid #263143;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #8c9aaf;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    color: #00d6a0;
+}
+
+select {
+    background: #202a39;
+    color: white;
+    padding: 12px;
+    border: 1px solid #344258;
+    border-radius: 7px;
+    margin: 10px 8px 10px 0;
+}
+
+.chart-area {
+    background: #0b111b;
+    border: 1px solid #263143;
+    border-radius: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #8995a8;
+}
+
+.chart-area h3 {
+    color: #00d6a0;
+    margin-bottom: 12px;
+}
+
+button {
+    background: #00b889;
+    color: #07130f;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00e0a5;
+}
+
+@media (max-width: 900px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 155px;
+        padding: 15px 8px;
+    }
+
+    .sidebar a {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .main {
+        margin-left: 155px;
+        padding: 15px;
+        width: calc(100% - 155px);
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-area {
+        height: 250px;
+    }
+}
